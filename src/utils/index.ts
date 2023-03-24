@@ -12,3 +12,14 @@ export const createReducer = function (initState: any, reducerMap: any): any {
         return state ? reducer(state, action.payload) : state;
     }
 }
+
+export const checkHttpStatus = function (response: any): any {
+    if (response.status >= 200 && response.status < 300) return response
+    const error = new Error(response.statusText)
+    error.message = response.message
+    throw error
+}
+
+export const parseJSON = function (response: any): any {
+    return response.json()
+}
