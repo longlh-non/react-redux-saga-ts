@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import '../styles/Timer.scss';
 
 export default function Timer() {
     const [time, setTime] = useState(new Date().toLocaleTimeString())
@@ -10,6 +11,6 @@ export default function Timer() {
     })
     
     return (
-        <div>{time}</div>
+        <div className="clock">{time}</div>
     )
 }
