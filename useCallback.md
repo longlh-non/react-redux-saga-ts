@@ -1,0 +1,2 @@
+- wrap return function of custom hook into useCallback. (optomizing custom hooks)
+- call function inside useEffect => can wrap function declaration inside useCallback => better to declare inside useEffect.
