@@ -6,8 +6,7 @@ import Timer from './components/Timer';
 import Todo from './components/Todo';
 import './App.css';
 import { createTodos } from './utils/todoUtils';
-
-const todos = createTodos(); 
+import UseRef from './pages/UseRef';
 
 function App() {
   const [tab, setTab] = React.useState('all');
@@ -15,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Timer />
+      <UseRef />
       <button onClick={() => setTab('all')}>
         All
       </button>
